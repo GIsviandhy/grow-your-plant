@@ -1,0 +1,82 @@
+body {
+    display: flex; /* flex container spy bs center n stuff */
+    justify-content: center;
+    align-items: center;
+    /* makes <body> stretch to fill the screen’s height; as tall as 100% of the viewport  */
+    min-height: 100vh; 
+    background: radial-gradient(#e2d7ff, rgb(255, 253, 201), rgb(242, 186, 186));
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background: white;
+    text-align: center;
+    width: 420px;
+    padding: 10px;
+    border: 3px solid #9E0E2B;
+    border-radius: 6px; /* rounds corners */
+    aspect-ratio: 420 / 330;
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: center;
+    justify-content: space-between; /* aka between elements (justify means mentok ujung e) */
+}
+
+.inner-container {
+    background: #FFDBFF;
+    width: 100%;
+    aspect-ratio: 420 / 330;
+    border: 3px solid #9E0E2B;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #9E0E2B;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.75rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.image-content {
+    width: 150px;
+    height: 150px;
+    /* > prevents img from repeating/tiling */
+    /* background-repeat: no-repeat;
+    /* > centers img in box */
+    /* background-position: center; */
+    background: url('sprite/sprite_frame_1.png') no-repeat center;
+    /* > HARUS STLH YG ATAS. makes img fit inside box w no crops */
+    background-size: contain;
+    /* vertical 10px, horizontal-centered (bc width is fixed) */
+    margin: 10px auto;
+}
+
+#main-btn {
+    background: white;
+    color: darkred;
+    border: 2px solid darkred;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: "Pixelify Sans", sans-serif;
+    cursor: pointer; /* cursor becomes hand when hovered over btn */
+    transition: transform 0.2s ease; /* efek enlarge lbh slow/smooth */
+}
+
+#main-btn:hover {
+    transform: scale(1.05); /* btn grows 5% bigger when hovered over */
+}
+
+.final-message {
+    display: none;
+    color: #9E0E2B;
+    margin-top: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
